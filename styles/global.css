@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --pink-light: #c59dd2;
+  --pink-base: #9547a5;
+  --pink-dark: #7d298a;
+  --pink-low: #3f0f41;
+
+  --blue-light: #73b6d2;
+  --blue-base: #358bb9;
+  --blue-mid: #2374a4;
+  --blue-dark: #144a72;
+  --blue-low: #08233c;
+
+  /* Shape Colors */
+  --shape-stroke: #002347;
+  --shape-hover: #001933;
+  --shape-base: #000f1f;
+  --shape-background: #00050a;
+
+  /* Text Colors */
+  --text-title: #f8fbfb;
+  --text-body: #e2e7e9;
+  --text-label: #bac6c9;
+
+  /* Fonts */
+  --ff-sans: "Raleway", sans-serif;
+
+  /* Font Sizes */
+  --title-lg: 700 3rem var(--ff-sans);
+  --title-md: 700 2.5rem var(--ff-sans);
+  --title-sm: 700 2rem var(--ff-sans);
+  --title-xs: 700 1rem var(--ff-sans);
+
+  --subtitle: 500 2rem var(--ff-sans);
+
+  --body-lg: 400 1.25rem var(--ff-sans);
+  --body-md: 400 1rem var(--ff-sans);
+  --body-sm: 400 0.875rem var(--ff-sans);
+  --body-xs: 400 0.75rem var(--ff-sans);
+
+  --button: 700 0.875rem var(--ff-sans);
+  --link: 400 0.875rem var(--ff-sans);
+  --tag: 700 0.625rem var(--ff-sans);
+}
+
+html {
+  font-family: var(--ff-sans);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--shape-background);
+  color: var(--text-body);
+}
+
+a {
+  text-decoration: inherit;
+}
+
+@media (max-width >= 80em) {
+}
