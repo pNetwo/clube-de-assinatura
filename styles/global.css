@@ -37,6 +37,7 @@
   --title-lg: 700 3rem var(--ff-sans);
   --title-md: 700 2.5rem var(--ff-sans);
   --title-sm: 700 2rem var(--ff-sans);
+  --title-h1: 700 1.75rem var(--ff-sans);
   --title-xs: 700 1rem var(--ff-sans);
 
   --subtitle: 500 2rem var(--ff-sans);
@@ -61,9 +62,18 @@ body {
   color: var(--text-body);
 }
 
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
 a {
   text-decoration: inherit;
 }
 
-@media (max-width >= 80em) {
+@media (width >= 80em) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
