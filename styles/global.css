@@ -38,6 +38,7 @@
   --title-md: 700 2.5rem var(--ff-sans);
   --title-sm: 700 2rem var(--ff-sans);
   --title-h1: 700 1.75rem var(--ff-sans);
+  --title-h2: 700 1.5rem var(--ff-sans);
   --title-xs: 700 1rem var(--ff-sans);
 
   --subtitle: 500 2rem var(--ff-sans);

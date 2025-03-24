@@ -161,9 +161,9 @@ section.content {
     }
 
     & .last-img {
+      padding: 0 4.5rem;
       display: flex;
       justify-content: space-between;
-
     }
 
     & h3.mobile {
@@ -178,7 +178,6 @@ section.content {
 
       text-align: center;
     }
-
 
     &:hover {
       & .highlight {
