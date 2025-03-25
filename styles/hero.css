@@ -17,10 +17,14 @@
       height: 3rem;
     }
 
-    & button {
+    & a {
       position: relative;
       width: 5.563rem;
       height: 2.5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       background-color: var(--pink-dark);
       color: var(--text-title);

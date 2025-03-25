@@ -70,6 +70,7 @@ body {
 
 a {
   text-decoration: inherit;
+  color: inherit;
 }
 
 @media (width >= 80em) {
