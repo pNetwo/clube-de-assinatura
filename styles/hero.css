@@ -178,7 +178,7 @@ section.content {
       display: block;
       font: var(--subtitle);
       color: rgba(226, 231, 233, 0.5);
-      line-height: 200%;
+      line-height: 250%;
 
       text-align: center;
     }

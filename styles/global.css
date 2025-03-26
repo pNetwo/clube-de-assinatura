@@ -41,7 +41,7 @@
   --title-h2: 700 1.5rem var(--ff-sans);
   --title-xs: 700 1rem var(--ff-sans);
 
-  --subtitle: 500 2rem var(--ff-sans);
+  --subtitle: 500 1.75rem var(--ff-sans);
 
   --body-lg: 400 1.25rem var(--ff-sans);
   --body-md: 400 1rem var(--ff-sans);
@@ -71,6 +71,14 @@ body {
 a {
   text-decoration: inherit;
   color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.hide {
+  display: none;
 }
 
 @media (width >= 80em) {

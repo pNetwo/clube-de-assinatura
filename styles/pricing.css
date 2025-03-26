@@ -1,13 +1,125 @@
 section.pricing {
   margin-top: 6.5rem;
-  margin-bottom: 6.5rem;
 
   display: flex;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column;
 
   & h2 {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
+  & .plans {
+    margin-top: 3.5rem;
+
+    display: flex;
+    gap: 1.5rem;
+
+    margin: 2rem 2rem 1.75rem 2rem;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+
+    & .plan {
+      width: 17rem;
+      height: 25rem;
+
+      padding: 2rem 2rem 1.75rem 2rem;
+
+      display: flex;
+      flex-direction: column;
+
+      border: 1px solid var(--shape-stroke);
+
+      & .title {
+        display: flex;
+        justify-content: space-between;
+
+        & h3 {
+          font: var(--title-sx);
+          color: var(--blue-light);
+        }
+
+        & span {
+        }
+      }
+
+      & .price {
+        margin-top: 1.5rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        & .value {
+          font: var(--title-h1);
+          color: var(--text-title);
+        }
+
+        & .annual {
+          margin-top: 0.5rem;
+          font: var(--body-sm);
+          color: var(--text-body);
+        }
+      }
+
+      & .details {
+        margin-top: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        & li {
+          margin-top: 0.5rem;
+          font: var(--body-xs);
+          color: var(--text-body);
+
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+
+      & button {
+        position: relative;
+        margin-top: 1.5rem;
+
+        height: 2.5rem;
+
+        font: var(--button);
+        color: var(--text-title);
+        background-color: var(--blue-dark);
+
+        border: none;
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        cursor: pointer;
+
+        transition: 0.3s ease-in-out;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 200%;
+          height: 300%;
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 100%;
+  
+          transition: 0.5s ease-in-out;
+          transform: translate(-50%, -50%) scale(0);
+          z-index: -0;
+        }
+
+        &:hover::before {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
 }
