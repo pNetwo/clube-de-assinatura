@@ -77,13 +77,17 @@ li {
   list-style: none;
 }
 
-.hide {
-  display: none;
+.desktop-only {
+  display: block;
 }
 
 @media (width >= 80em) {
   .container {
     max-width: 1400px;
     padding: 0 5rem;
+  }
+
+  .desktop-only {
+    display: none;
   }
 }

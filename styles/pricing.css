@@ -3,11 +3,31 @@ section.pricing {
 
   display: flex;
   flex-direction: column;
+  text-align: center;
 
-  & h2 {
+  .title {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+
+    box-sizing: border-box;
+
+    & h3 {
+      font: var(--title-xs);
+      color: var(--blue-light);
+    }
+
+    &.popular h3 {
+      color: var(--pink-light);
+    }
+
+    & span {
+      padding: 0.563rem 1.25rem;
+      background-color: var(--shape-stroke);
+      border-radius: 999rem;
+
+      font: var(--text-body);
+    }
   }
 
   & .plans {
@@ -24,28 +44,19 @@ section.pricing {
     white-space: nowrap;
 
     & .plan {
-      width: 17rem;
+      width: 16rem;
       height: 25rem;
 
-      padding: 2rem 2rem 1.75rem 2rem;
+      padding: 1.5rem 1.5rem 1.75rem 1.5rem;
 
       display: flex;
       flex-direction: column;
 
+      background-color: var(--shape-base);
       border: 1px solid var(--shape-stroke);
+      border-radius: 0.5rem;
 
-      & .title {
-        display: flex;
-        justify-content: space-between;
-
-        & h3 {
-          font: var(--title-sx);
-          color: var(--blue-light);
-        }
-
-        & span {
-        }
-      }
+      scroll-snap-align: start;
 
       & .price {
         margin-top: 1.5rem;
@@ -80,6 +91,11 @@ section.pricing {
           display: flex;
           align-items: center;
           gap: 0.5rem;
+
+          & img {
+            width: 0.875rem;
+            height: 0.875rem;
+          }
         }
       }
 
@@ -110,7 +126,7 @@ section.pricing {
           height: 300%;
           background: rgba(255, 255, 255, 0.2);
           border-radius: 100%;
-  
+
           transition: 0.5s ease-in-out;
           transform: translate(-50%, -50%) scale(0);
           z-index: -0;
@@ -120,6 +136,64 @@ section.pricing {
           transform: translate(-50%, -50%) scale(1);
         }
       }
+
+      &:nth-child(2) button {
+        background-color: var(--pink-dark);
+      }
     }
+  }
+}
+
+@media (width >= 80em) {
+  section.pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .plans {
+      margin-top: 12rem;
+
+      border-radius: 0.5rem;
+
+      & .plan {
+        position: relative;
+        width: 18rem;
+        height: 26rem;
+
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          background-color: var(--shape-hover);
+          box-shadow: 0 0 25px 1px rgba(0, 150, 255, 0.1);
+
+          &
+          animation: showPlans 0.3s ease-in-out forwards;
+        }
+      }
+
+      & .plan:nth-child(2) {
+        position: absolute;
+        z-index: 2;
+      }
+
+      & .plan:nth-child(1) {
+        position: absolute;
+        z-index: 1;
+      }
+
+      & .plan:nth-child(3) {
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@keyframes showPlans {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(10rem, 0);
   }
 }
