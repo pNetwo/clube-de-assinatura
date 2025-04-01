@@ -153,47 +153,88 @@ section.pricing {
     & .plans {
       margin-top: 12rem;
 
-      border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+
+      &:hover,
+      &:focus-within {
+        .plan:nth-child(1) {
+          animation: showPlansRight 1s forwards;
+        }
+
+        .plan:nth-child(3) {
+          animation: showPlansLeft 1s forwards;
+        }
+      }
 
       & .plan {
-        position: relative;
         width: 18rem;
         height: 26rem;
+
+        border-radius: 1.5rem;
 
         transition: 0.3s ease-in-out;
 
         &:hover {
           background-color: var(--shape-hover);
           box-shadow: 0 0 25px 1px rgba(0, 150, 255, 0.1);
-
-          &
-          animation: showPlans 0.3s ease-in-out forwards;
         }
       }
 
       & .plan:nth-child(2) {
         position: absolute;
         z-index: 2;
+
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          transform: translate(0, -1rem);
+          z-index: 3;
+        }
       }
 
       & .plan:nth-child(1) {
         position: absolute;
         z-index: 1;
+
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          transform: translate(0, -1rem);
+          z-index: 3;
+        }
       }
 
       & .plan:nth-child(3) {
+        position: absolute;
         z-index: 1;
+
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          z-index: 3;
+        }
       }
     }
   }
 }
 
-@keyframes showPlans {
+@keyframes showPlansRight {
   0% {
     transform: translate(0);
   }
 
   100% {
-    transform: translate(10rem, 0);
+    transform: translate(-18rem, 3rem) rotate(-7deg);
+  }
+}
+
+@keyframes showPlansLeft {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(18rem, 3rem) rotate(7deg);
   }
 }
